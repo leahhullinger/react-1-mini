@@ -10,8 +10,8 @@ In this project, we'll introduce you to React by creating a small project from s
 
 ## Setup
 
-* Fork and clone this repository.
-* Run `sudo npm install -g create-react-app`.
+- Fork and clone this repository.
+- Run `sudo npm install -g create-react-app`.
 
 ## Step 1
 
@@ -21,9 +21,9 @@ In this step, we'll use `create-react-app` to create a React boilerplate.
 
 ### Instructions
 
-* `cd` into the root directory of the project.
-* Run `create-react-app ./`.
-* Delete the `README.md` the boilerplate generates and rename `README.old.md` back to `README.md`.
+- `cd` into the root directory of the project.
+- Run `create-react-app ./`.
+- Delete the `README.md` the boilerplate generates and rename `README.old.md` back to `README.md`.
 
 ### Solution
 
@@ -37,8 +37,8 @@ In this step, we'll clear the boilerplate that is made for us in `src/App.js`.
 
 ### Instructions
 
-* Open `src/App.js`.
-* Inside of the `return()` statement, replace everything with a single `<div>` element.
+- Open `src/App.js`.
+- Inside of the `return()` statement, replace everything with a single `<div>` element.
 
 ### Solution
 
@@ -47,17 +47,13 @@ In this step, we'll clear the boilerplate that is made for us in `src/App.js`.
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <div>
-
-      </div>
-    );
+    return <div />;
   }
 }
 
@@ -74,11 +70,11 @@ In this step, we'll add the necessary elements inside the `<div>` element for ca
 
 ### Instructions
 
-* Open `src/App.js`.
-* Inside of the `<div>` element add two inputs with lables and an `Add Friend` button:
-  * The first input should be for getting a URL to a picture.
-  * The second input should be for getting a name.
-* Run `npm start` to spin up a development server and see your changes.
+- Open `src/App.js`.
+- Inside of the `<div>` element add two inputs with lables and an `Add Friend` button:
+  - The first input should be for getting a URL to a picture.
+  - The second input should be for getting a name.
+- Run `npm start` to spin up a development server and see your changes.
 
 ### Solution
 
@@ -87,9 +83,9 @@ In this step, we'll add the necessary elements inside the `<div>` element for ca
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -120,18 +116,18 @@ export default App;
 
 ### Summary
 
-In this step, we'll initialize `state` to our `src/App.js`. The `state` object will manage a list of friends and also the values for creating a new friend. 
+In this step, we'll initialize `state` to our `src/App.js`. The `state` object will manage a list of friends and also the values for creating a new friend.
 
 ### Instructions
 
-* Open `src/App.js`.
-* Above the `render` method, add a new method called `constructor`.
-* Inside the `constructor` method, invoke `super`.
-  * This allows us to set state.
-* Create a new state object, by using `this.state = {}`, with the following keys:
-  * `friends` - An empty array.
-  * `picture` - An empty string.
-  * `name` - An empty string.
+- Open `src/App.js`.
+- Above the `render` method, add a new method called `constructor`.
+- Inside the `constructor` method, invoke `super`.
+  - This allows us to set state.
+- Create a new state object, by using `this.state = {}`, with the following keys:
+  - `friends` - An empty array.
+  - `picture` - An empty string.
+  - `name` - An empty string.
 
 ### Solution
 
@@ -140,9 +136,9 @@ In this step, we'll initialize `state` to our `src/App.js`. The `state` object w
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -150,11 +146,11 @@ class App extends Component {
 
     this.state = {
       friends: [],
-      picture: '',
-      name: ''
+      picture: "",
+      name: ""
     };
   }
-  
+
   render() {
     return (
       <div>
@@ -181,17 +177,17 @@ In this step, we'll hook up our `input` elements to `state`. In order to do this
 
 ### Instructions
 
-* Open `src/App.js`.
-* Underneath the `constructor` method, create a new method called `updatePicture`:
-  * This method should have one parameter: `value`.
-  * This methoud should call `this.setState` to update `picture` with the given `value`.
-* Underneath the `updatePicture` method, create a new method called `updateName`:
-  * This method should have one parameter: `value`.
-  * This method should call `this.setState` to update `name` with the given `value`.
-* On the first input element:
-  * Add an `onChange` property that captures the event's value and calls `updatePicture` with that value.
-* On the second input element:
-  * Add an `onChange` property that captures the event's value and calls `updateName` with that value.
+- Open `src/App.js`.
+- Underneath the `constructor` method, create a new method called `updatePicture`:
+  - This method should have one parameter: `value`.
+  - This methoud should call `this.setState` to update `picture` with the given `value`.
+- Underneath the `updatePicture` method, create a new method called `updateName`:
+  - This method should have one parameter: `value`.
+  - This method should call `this.setState` to update `name` with the given `value`.
+- On the first input element:
+  - Add an `onChange` property that captures the event's value and calls `updatePicture` with that value.
+- On the second input element:
+  - Add an `onChange` property that captures the event's value and calls `updateName` with that value.
 
 ### Solution
 
@@ -200,9 +196,9 @@ In this step, we'll hook up our `input` elements to `state`. In order to do this
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -210,16 +206,16 @@ class App extends Component {
 
     this.state = {
       friends: [],
-      picture: '',
-      name: ''
+      picture: "",
+      name: ""
     };
   }
 
-  updatePicture( value ) {
+  updatePicture(value) {
     this.setState({ picture: value });
   }
 
-  updateName( value ) {
+  updateName(value) {
     this.setState({ name: value });
   }
 
@@ -227,10 +223,16 @@ class App extends Component {
     return (
       <div>
         <span>Picture:</span>
-        <input onChange={ ( e ) => this.updatePicture( e.target.value ) } value={ this.state.picture } />
+        <input
+          onChange={e => this.updatePicture(e.target.value)}
+          value={this.state.picture}
+        />
 
         <span>Name:</span>
-        <input onChange={ ( e ) => this.updateName( e.target.value ) } value={ this.state.name } />
+        <input
+          onChange={e => this.updateName(e.target.value)}
+          value={this.state.name}
+        />
 
         <button>Add Friend</button>
       </div>
@@ -255,13 +257,13 @@ In this step, we'll create a method for adding a friend to the `friends` array o
 
 ### Instructions
 
-* Open `src/App.js`.
-* Underneath the `updateName` method, create a new method called `addFriend`:
-  * This method should use `this.setState` to add a new friend object to the `friends` array on state.
-    * An example of the `friend object` would look like: `{ picture: 'http://via.placeholder.com/50x50', name: 'James Lemire' }`
-  * This method should use `this.setState` to clear the values of `picture` and `name` on state.
-* Add an `onClick` property that calls the `addFriend` method to the `button` element.
-  * You must use an arrow function in order to keep the correct context of this.
+- Open `src/App.js`.
+- Underneath the `updateName` method, create a new method called `addFriend`:
+  - This method should use `this.setState` to add a new friend object to the `friends` array on state.
+    - An example of the `friend object` would look like: `{ picture: 'http://via.placeholder.com/50x50', name: 'James Lemire' }`
+  - This method should use `this.setState` to clear the values of `picture` and `name` on state.
+- Add an `onClick` property that calls the `addFriend` method to the `button` element.
+  - You must use an arrow function in order to keep the correct context of this.
 
 ### Solution
 
@@ -270,9 +272,9 @@ In this step, we'll create a method for adding a friend to the `friends` array o
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -280,16 +282,16 @@ class App extends Component {
 
     this.state = {
       friends: [],
-      picture: '',
-      name: ''
+      picture: "",
+      name: ""
     };
   }
 
-  updatePicture( value ) {
+  updatePicture(value) {
     this.setState({ picture: value });
   }
 
-  updateName( value ) {
+  updateName(value) {
     this.setState({ name: value });
   }
 
@@ -299,19 +301,25 @@ class App extends Component {
     let newFriends = friends.slice();
     newFriends.push({ picture, name });
 
-    this.setState({ friends: newFriends, picture: '', name: '' });
+    this.setState({ friends: newFriends, picture: "", name: "" });
   }
 
   render() {
     return (
       <div>
         <span>Picture:</span>
-        <input onChange={ ( e ) => this.updatePicture( e.target.value ) } value={ this.state.picture } />
+        <input
+          onChange={e => this.updatePicture(e.target.value)}
+          value={this.state.picture}
+        />
 
         <span>Name:</span>
-        <input onChange={ ( e ) => this.updateName( e.target.value ) } value={ this.state.name } />
+        <input
+          onChange={e => this.updateName(e.target.value)}
+          value={this.state.name}
+        />
 
-        <button onClick={ () => this.addFriend() }>Add Friend</button>
+        <button onClick={() => this.addFriend()}>Add Friend</button>
       </div>
     );
   }
@@ -332,14 +340,14 @@ In this step, we'll add a way to see our list of friends on the DOM by `mapping`
 
 ### Instructions
 
-* Open `src/App.js`.
-* Just above the `return()` statement, in the `render` method, create a new `const` variable called `friends`:
-  * Map through the `friends` array on `state` to render a `div` element that contains an `img` and a `span` element.
-  * The `img` element's `src` property should equal the value of the `friend`'s picture.
-    * Optionally you can control the maximum width/height by using the width/height propertys on the `img` element.
-  * The `span` element should display the `friend`'s name.
-  * Be sure to assign a `key` on the parent div. This is a requirement from React.
-* Just below the `Add Friend` button, use `{}` to break out of JSX, and render the new `friends` variable.
+- Open `src/App.js`.
+- Just above the `return()` statement, in the `render` method, create a new `const` variable called `friends`:
+  - Map through the `friends` array on `state` to render a `div` element that contains an `img` and a `span` element.
+  - The `img` element's `src` property should equal the value of the `friend`'s picture.
+    - Optionally you can control the maximum width/height by using the width/height propertys on the `img` element.
+  - The `span` element should display the `friend`'s name.
+  - Be sure to assign a `key` on the parent div. This is a requirement from React.
+- Just below the `Add Friend` button, use `{}` to break out of JSX, and render the new `friends` variable.
 
 ### Solution
 
@@ -348,9 +356,9 @@ In this step, we'll add a way to see our list of friends on the DOM by `mapping`
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -358,16 +366,16 @@ class App extends Component {
 
     this.state = {
       friends: [],
-      picture: '',
-      name: ''
+      picture: "",
+      name: ""
     };
   }
 
-  updatePicture( value ) {
+  updatePicture(value) {
     this.setState({ picture: value });
   }
 
-  updateName( value ) {
+  updateName(value) {
     this.setState({ name: value });
   }
 
@@ -377,28 +385,34 @@ class App extends Component {
     let newFriends = friends.slice();
     newFriends.push({ picture, name });
 
-    this.setState({ friends: newFriends, picture: '', name: '' });
+    this.setState({ friends: newFriends, picture: "", name: "" });
   }
 
   render() {
-    const friends = this.state.friends.map( ( friend, index ) => (
-      <div key={ `friend-${ index }-${ friend.name }` }>
-        <img width="100px" src={ friend.picture } />
-        <span>{ friend.name }</span>
+    const friends = this.state.friends.map((friend, index) => (
+      <div key={`friend-${index}-${friend.name}`}>
+        <img width="100px" src={friend.picture} />
+        <span>{friend.name}</span>
       </div>
     ));
 
     return (
       <div>
         <span>Picture:</span>
-        <input onChange={ ( e ) => this.updatePicture( e.target.value ) } value={ this.state.picture } />
+        <input
+          onChange={e => this.updatePicture(e.target.value)}
+          value={this.state.picture}
+        />
 
         <span>Name:</span>
-        <input onChange={ ( e ) => this.updateName( e.target.value ) } value={ this.state.name } />
+        <input
+          onChange={e => this.updateName(e.target.value)}
+          value={this.state.name}
+        />
 
-        <button onClick={ () => this.addFriend() }>Add Friend</button>
+        <button onClick={() => this.addFriend()}>Add Friend</button>
 
-        { friends }
+        {friends}
       </div>
     );
   }
